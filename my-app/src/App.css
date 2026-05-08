@@ -1,0 +1,181 @@
+.App {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 196, 112, 0.35), transparent 28%),
+    radial-gradient(circle at top right, rgba(93, 211, 158, 0.2), transparent 30%),
+    linear-gradient(135deg, #f5efe4 0%, #eef5ef 100%);
+  color: #1f2a1f;
+}
+
+.app-shell {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hero-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 24px 60px rgba(51, 61, 51, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #7a5c22;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.hero-text {
+  max-width: 720px;
+  margin: 16px 0 0;
+  color: #4b5b4c;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.hero-text span {
+  font-weight: 700;
+  color: #1f2a1f;
+}
+
+.refresh-button {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 22px;
+  background: #1f7a5c;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.refresh-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(31, 122, 92, 0.25);
+}
+
+.status-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.status-card {
+  padding: 20px 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 30px rgba(51, 61, 51, 0.08);
+}
+
+.status-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #5e6b5f;
+  font-size: 0.85rem;
+}
+
+.error-banner {
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #ffe2df;
+  color: #9f2f24;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.user-card,
+.empty-state {
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 34px rgba(51, 61, 51, 0.08);
+}
+
+.user-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.user-card-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.status-pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #d8f2e6;
+  color: #1f7a5c;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.user-meta {
+  margin: 18px 0 0;
+}
+
+.user-meta div {
+  padding: 10px 0;
+  border-top: 1px solid #e9ede8;
+}
+
+.user-meta dt {
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6a776b;
+}
+
+.user-meta dd {
+  margin: 0;
+  word-break: break-word;
+  color: #223123;
+}
+
+.empty-state {
+  text-align: center;
+  color: #5e6b5f;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 24px 16px 40px;
+  }
+
+  .hero-card {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .status-row {
+    grid-template-columns: 1fr;
+  }
+
+  .refresh-button {
+    width: 100%;
+  }
+}

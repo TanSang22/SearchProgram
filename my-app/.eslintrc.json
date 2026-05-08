@@ -1,0 +1,13 @@
+{
+  "extends": ["./.eslintrc.base.json"],
+  "rules": {
+    "no-unused-vars": "off",       // Tắt cảnh báo khai báo biến mà không dùng
+    "no-undef": "off",             // Tắt lỗi không hiểu biến toàn cục (như $)
+    "react/prop-types": "off",      // Tắt bắt lỗi prop-types nếu bạn lười viết
+    "no-console": "warn"           // Chỉ cảnh báo console.log thay vì báo lỗi đỏ
+  },
+  "globals": {
+    "$": "readonly",               // Khai báo cho ESLint biết $ là hợp lệ
+    "jQuery": "readonly"
+  }
+}
